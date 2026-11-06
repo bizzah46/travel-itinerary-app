@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Food Cost Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- DYNAMIC TITLE -->
+        <h1 id="title">
+            Local Food Cost Calculator
+        </h1>
+
+        <p>
+            Calculate ingredient quantities and
+            recipe costs based on your destination.
+        </p>
+
+        <!-- DESTINATION -->
+        <label for="destinationSelect">
+            Select Destination
+        </label>
+
+        <select id="destinationSelect">
+            <option value="Indonesia">
+                Indonesia
+            </option>
+
+            <option value="Malaysia">
+                Malaysia
+            </option>
+
+            <option value="London">
+                London
+            </option>
+        </select>
+
+        <!-- RECIPE -->
+        <label for="recipeSelect">
+            Select Recipe
+        </label>
+
+        <select id="recipeSelect"></select>
+
+        <!-- SERVINGS -->
+        <label for="servings">
+            Number of Servings
+        </label>
+
+        <input type="number" id="servings" min="1" max="100" value="2">
+
+        <!-- CALCULATE -->
+        <button id="calculateBtn" type="button">
+            Calculate Cost
+        </button>
+
+        <!-- INGREDIENTS -->
+        <h2>Ingredients</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                    <th id="costHeader">Cost</th>
+                </tr>
+            </thead>
+
+            <tbody id="ingredientList"></tbody>
+        </table>
+
+        <!-- RESULT -->
+        <div class="result">
+
+            <h2 id="totalCost">
+                Total Cost: -
+            </h2>
+
+            <p id="costPerServing">
+                Cost per Serving: -
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="calculation.js"></script>
+
+</body>
+
+</html>

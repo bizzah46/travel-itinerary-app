@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Travel Planner</title>
+</head>
+
+<body>
+
+  <h1 id="title">Travel Planner</h1>
+  <label>Select Date:</label>
+  <br>
+  <input type="date" id="dateInput">
+  <br><br>
+  <label>Recommended Activities:</label>
+  <br>
+
+
+  <div id="activityInput"></div>
+  <br><br>
+  <button id="saveBtn">
+    Save Activity
+  </button>
+  <button id="viewItinerariesBtn">
+    View Activities
+  </button>
+
+
+
+
+  <dialog id="editDialog">
+    <h2>Edit Activity</h2>
+
+    <label for="editActivityInput">
+      Activity Name
+    </label>
+
+    <input type="text" id="editActivityInput">
+
+    <br><br>
+
+    <label for="editDateInput">
+      Date
+    </label>
+
+    <input type="date" id="editDateInput">
+
+    <br><br>
+
+    <button id="confirmEditBtn">
+      Save Changes
+    </button>
+
+    <button type="button" onclick="document.getElementById('editDialog').close()">
+      Cancel
+    </button>
+  </dialog>
+
+
+  <button id="recipeCalculatorBtn">
+    Recipe Cost Calculator
+  </button>
+
+
+
+  <hr>
+  <div id="itineraryList"></div>
+  <script src="travel-itinerary.js"></script>
+
+
+</body>
+
+</html>
